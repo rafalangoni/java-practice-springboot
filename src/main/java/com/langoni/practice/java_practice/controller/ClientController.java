@@ -1,9 +1,7 @@
 package com.langoni.practice.java_practice.controller;
 
 import com.langoni.practice.java_practice.model.Client;
-import com.langoni.practice.java_practice.model.CustomerMongoDb;
 import com.langoni.practice.java_practice.repository.ClienteRepositoryH2;
-import com.langoni.practice.java_practice.repository.CustomerRepositoryMongoDb;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
