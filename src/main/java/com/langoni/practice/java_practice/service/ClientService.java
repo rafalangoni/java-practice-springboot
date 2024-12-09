@@ -19,7 +19,7 @@ public class ClientService {
     @Autowired
     private ClientRepositoryH2 repositoryH2;
 
-    @UrgencyType(UrgencyLevel.URGENT)
+    @UrgencyType(UrgencyLevel.REGULAR)
     @Autowired
     private NotifyClient notifier;
 

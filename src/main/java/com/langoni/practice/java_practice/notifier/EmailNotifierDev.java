@@ -1,15 +1,15 @@
 package com.langoni.practice.java_practice.notifier;
 
 import com.langoni.practice.java_practice.model.Client;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
-@UrgencyType(UrgencyLevel.URGENT)
+@Profile("dev")
+@UrgencyType(UrgencyLevel.REGULAR)
 @Component
-public class SMSNotifier implements NotifyClient{
+public class EmailNotifierDev implements NotifyClient{
     @Override
     public void notify(Client client, String message) {
-        System.out.printf("Notifying client %s by SMS in phone %s: %s, \n", client.getName(), client.getPhoneNumber(), message);
+        System.out.printf("MOCK: Notifying client %s by email %s: %s \n", client.getName(), client.getEmail(), message);
     }
 }

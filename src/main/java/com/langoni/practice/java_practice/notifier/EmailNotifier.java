@@ -3,8 +3,10 @@ package com.langoni.practice.java_practice.notifier;
 import com.langoni.practice.java_practice.model.Client;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
+@Profile("prod")
 @UrgencyType(UrgencyLevel.REGULAR)
 @Component
 public class EmailNotifier implements NotifyClient{
