@@ -3,6 +3,8 @@ package com.langoni.practice.java_practice.service;
 import com.langoni.practice.java_practice.model.Client;
 import com.langoni.practice.java_practice.notifier.EmailNotifier;
 import com.langoni.practice.java_practice.notifier.NotifyClient;
+import com.langoni.practice.java_practice.notifier.UrgencyLevel;
+import com.langoni.practice.java_practice.notifier.UrgencyType;
 import com.langoni.practice.java_practice.repository.ClientRepositoryH2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -17,7 +19,7 @@ public class ClientService {
     @Autowired
     private ClientRepositoryH2 repositoryH2;
 
-    @Qualifier("sms")
+    @UrgencyType(UrgencyLevel.URGENT)
     @Autowired
     private NotifyClient notifier;
 

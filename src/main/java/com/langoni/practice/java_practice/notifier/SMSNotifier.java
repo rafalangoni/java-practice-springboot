@@ -4,7 +4,7 @@ import com.langoni.practice.java_practice.model.Client;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Qualifier("sms")
+@UrgencyType(UrgencyLevel.URGENT)
 @Component
 public class SMSNotifier implements NotifyClient{
     @Override
