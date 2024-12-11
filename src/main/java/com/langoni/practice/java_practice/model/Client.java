@@ -18,5 +18,11 @@ public class Client {
 
     private String email;
     private String phoneNumber;
+    private boolean isActive = false;
+
+    public void activateClient(){
+        System.out.println("Client is active!");
+        this.isActive = true;
+    }
 
 }

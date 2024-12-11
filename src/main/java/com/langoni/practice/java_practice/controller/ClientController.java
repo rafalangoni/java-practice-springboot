@@ -1,7 +1,7 @@
 package com.langoni.practice.java_practice.controller;
 
 import com.langoni.practice.java_practice.model.Client;
-import com.langoni.practice.java_practice.service.ClientService;
+import com.langoni.practice.java_practice.service.ActivatingClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +13,7 @@ import java.util.List;
 public class ClientController {
 
     @Autowired
-    private ClientService service;
+    private ActivatingClientService service;
 
     @GetMapping
     public List<Client> clientList(){
